@@ -6,3 +6,6 @@ The database would serve as a central repository to hold list of spam numbers re
 Users in turn can subscribe (if interested) for getting  updated numbers from the database (so that they could add filters in their phones to block calls if received in the future).
 
 The numbers held in the database would serve as inputs to cyber or security departments for analysis.
+
+# Project Wireframe
+<img width="600px" src="wireframe/.drawio.png" alt="Image of Project Wireframe">
