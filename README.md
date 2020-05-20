@@ -7,6 +7,8 @@ Users in turn can subscribe (if interested) for getting  updated numbers from th
 
 The numbers held in the database would serve as inputs to cyber or security departments for analysis.
 
+## Project Wireframe
+<img width="600px" src="wireframe/.drawio.png" alt="Image of Project Wireframe">
 
 ## User-story
 ```
