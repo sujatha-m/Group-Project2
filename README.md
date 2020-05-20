@@ -6,3 +6,13 @@ The database would serve as a central repository to hold list of spam numbers re
 Users in turn can subscribe (if interested) for getting  updated numbers from the database (so that they could add filters in their phones to block calls if received in the future).
 
 The numbers held in the database would serve as inputs to cyber or security departments for analysis.
+
+
+## User-story
+```
+AS A User
+
+I can able to sign-up or sign-in to the spam tracker
+
+SO THAT I can complain the spam number which i am getting, and view all spam numbers which stored in the database. And have option to edit or delete which i complained.
+```
