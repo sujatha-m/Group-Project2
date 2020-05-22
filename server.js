@@ -6,6 +6,7 @@
 // Dependencies
 // =============================================================
 const express = require('express')
+const path = require('path')
 
 // Requiring our models for syncing to the MySQL database
 // Remember: This syntax imports the `db` object exported from the
@@ -24,9 +25,9 @@ const app = express()
 // app.use(express.urlencoded({ extended: true }))
 // app.use(express.json())
 
-// // Allow Express to automatically serve static resource like the
-// // HTML, CSS and JavaScript for the frontend client application.
-// app.use(express.static('./public'))
+// Allow Express to automatically serve static resource like the
+// HTML, CSS and JavaScript for the frontend client application.
+app.use(express.static(path.join(__dirname, 'assets')))
 
 // // Routes
 // // =============================================================
