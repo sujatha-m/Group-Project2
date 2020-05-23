@@ -14,6 +14,7 @@ const exphbs = require('express-handlebars')
 // Requiring passport as we've configured it
 const passport = require('./config/passport')
 const HTMLRoutes = require('./routes/HTMLRoutes')
+const APIRoutes = require('./routes/APIRoutes')
 
 // Setting up requiring models for syncing
 const db = require('./models')
@@ -41,6 +42,7 @@ app.use(passport.session())
 // // Routes
 // // =============================================================
 app.use(HTMLRoutes)
+app.use(APIRoutes)
 
 // Syncing our sequelize models and then starting our express app
 db.sequelize.sync({ force: true }).then(() => {
