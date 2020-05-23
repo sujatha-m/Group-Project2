@@ -17,8 +17,8 @@ router.get('/register', (req, res) => {
   res.sendFile(path.join(PUBLIC_FOLDER_PATH, 'register.html'))
 })
 
-router.get('/complaint', (req, res) => {
-  res.sendFile(path.join(PUBLIC_FOLDER_PATH, 'complaint.html'))
+router.get('/report', (req, res) => {
+  res.sendFile(path.join(PUBLIC_FOLDER_PATH, 'report.html'))
 })
 
 module.exports = router
