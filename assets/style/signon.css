@@ -1,7 +1,7 @@
 .signon {
   margin: 0 auto;
   width: 675px;
-  height: 400px;
+  min-height: 400px;
   border-radius: 10px;
   overflow: hidden;
   display: flex;
@@ -17,7 +17,7 @@
 .signon-bar {
   background: linear-gradient(270deg, rgba(27, 37, 34, 0.45) 0%, rgba(0, 0, 0, 0) 100%), rgba(187, 17, 119, 0.9);
   width: 200px;
-  height: 100%;
+  height: auto;
 }
 
 .signon-bar-phone {
