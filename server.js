@@ -13,9 +13,9 @@ const session = require('express-session')
 const exphbs = require('express-handlebars')
 // Requiring passport as we've configured it
 const passport = require('./config/passport')
+const HTMLRoutes = require('./routes/HTMLRoutes')
 
-// Setting up port and requiring models for syncing
-const PORT = process.env.PORT || 3000
+// Setting up requiring models for syncing
 const db = require('./models')
 
 // Creating express app and configuring middleware needed for authentication
@@ -40,13 +40,10 @@ app.use(passport.session())
 
 // // Routes
 // // =============================================================
-// Requiring our routes
-require('./routes/html-routes.js')(app)
-require('./routes/api-routes.js')(app)
+app.use(HTMLRoutes)
 
-// Syncing our database and logging a message to the user upon success
-db.sequelize.sync().then(function () {
-  app.listen(PORT, function () {
-    console.log('==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.', PORT, PORT)
-  })
+// Syncing our sequelize models and then starting our express app
+db.sequelize.sync({ force: true }).then(() => {
+  const PORT = process.env.PORT || 3000
+  app.listen(PORT, () => console.log(`App listening on PORT ${PORT}`))
 })
