@@ -11,6 +11,7 @@ const express = require('express')
 const path = require('path')
 const session = require('express-session')
 const exphbs = require('express-handlebars')
+const logger = require('morgan')
 // Requiring passport as we've configured it
 const passport = require('./config/passport')
 const HTMLRoutes = require('./routes/HTMLRoutes')
@@ -20,6 +21,8 @@ const db = require('./models')
 
 // Creating express app and configuring middleware needed for authentication
 const app = express()
+// Log requests to the console.
+app.use(logger('dev'))
 
 // Set up the Express app to use the Handlebars template engine
 app.engine('handlebars', exphbs({ defaultLayout: 'main' }))
