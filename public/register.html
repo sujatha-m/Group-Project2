@@ -9,11 +9,12 @@
   <link rel="stylesheet" href="style/signon.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
   <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  <script defer src="js/signon.js"></script>
 </head>
 <body class="dark-bg">
   <section class="hero is-fullheight">
     <div class="hero-body">
-      <div class="signon">
+      <form class="signon" id="signon-register">
         <div class="signon-bar">
           <span class="signon-bar-phone"></span>
         </div>
@@ -25,14 +26,14 @@
             <input class="signon-input" type="text" name="username" id="username" placeholder="Username">
             <input class="signon-input" type="email" name="email" id="email" placeholder="Email address">
             <input class="signon-input" type="password" name="password" id="password" placeholder="Password">
-            <input class="signon-input" type="password-confirm" name="password-confirm" id="password-confirm" placeholder="Confirm Password">
+            <input class="signon-input" type="password" name="password-confirm" id="password-confirm" placeholder="Confirm Password">
           </div>
           <footer class="signon-footer">
             <a href="">Login</a>
             <button class="button">Register</button>
           </footer>
         </div>
-      </div>
+      </form>
     </div>
   </section>
 </body>
