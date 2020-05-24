@@ -20,7 +20,7 @@ router.post('/api/register', async (req, res) => {
       password
     })
 
-    res.json(user).redirect(307, '/api/login')
+    res.status(200).json(user)
   } catch (error) {
     res.status(404).json(error)
   }
