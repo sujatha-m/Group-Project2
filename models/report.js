@@ -1,6 +1,6 @@
 module.exports = function (sequelize, DataTypes) {
   // Give the Author model a name of type STRING
-  const Complaint = sequelize.define('Complaint', {
+  const Report = sequelize.define('Report', {
 
     phone: {
       type: DataTypes.STRING,
@@ -21,11 +21,11 @@ module.exports = function (sequelize, DataTypes) {
       validate: { len: [1, 50] }
     }
   })
-  Complaint.associate = function (models) {
-    Complaint.belongsTo(models.User, {
+  Report.associate = function (models) {
+    Report.belongsTo(models.User, {
       foreignKey: { allowNull: false }
     })
   }
 
-  return Complaint
+  return Report
 }
