@@ -38,6 +38,34 @@ a:hover {
   border-radius: 10px;
 }
 
+.button:hover {
+  background: #BB1177;
+  color: #fff;
+}
+
 .button.is-primary {
+  background: #BB1177;
+  color: #fff;
+}
+
+.button.is-primary:hover {
+  background: #BB1177;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 42px;
+  color: #5C718A;
+}
+
+.subtitle {
+  font-size: 28px;
+  line-height: 42px;
+
+  color: #5C718A;
+}
+
+a.navbar-item:hover {
   color: #BB1177;
 }
