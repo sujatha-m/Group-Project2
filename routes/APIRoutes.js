@@ -12,10 +12,11 @@ router.post('/api/login', passport.authenticate('local'), (req, res) => {
 
 // Register
 router.post('/api/register', async (req, res) => {
-  const { email, password } = req.body
+  const { username, email, password } = req.body
 
   try {
     const user = await db.User.create({
+      username,
       email,
       password
     })
