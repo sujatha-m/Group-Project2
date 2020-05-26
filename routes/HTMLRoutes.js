@@ -23,5 +23,8 @@ router.get('/register', (req, res) => {
 router.get('/report', isAuthenticated, (req, res) => {
   res.sendFile(path.join(PUBLIC_FOLDER_PATH, 'report.html'))
 })
+router.get('/view', (req, res) => {
+  res.sendFile(path.join(PUBLIC_FOLDER_PATH, 'view.html'))
+})
 
 module.exports = router
