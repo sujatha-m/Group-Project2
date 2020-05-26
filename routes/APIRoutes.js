@@ -59,4 +59,9 @@ router.post('/api/report', async (req, res) => {
   }
 })
 
+router.get('/api/view', function (req, res) {
+  db.Report.findAll()
+    .then(rows => res.status(200).json({ data: rows }))
+    .catch(err => res.status(500).json({ errors: [err] }))
+})
 module.exports = router
