@@ -69,8 +69,11 @@ function register () {
     }
 
     fetch('/api/register', requestOptions)
-      .then(response => response.text())
-      .then(result => console.log(result))
+      // .then(response => response.text())
+      // .then(result => console.log(result))
+      .then(function (response) {
+        window.location.replace('/report')
+      })
       .catch(error => console.log('error', error))
   })
 }
