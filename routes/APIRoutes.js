@@ -48,6 +48,7 @@ router.post('/api/report', async (req, res) => {
   const data = {
     phoneNumber: req.body.phoneNumber,
     cityName: req.body.cityName,
+    message: req.body.message,
     UserId: req.user.id
   }
   try {
