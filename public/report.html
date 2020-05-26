@@ -1,11 +1,45 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Spam Numbers Tracker | Report</title>
+  <link rel="stylesheet" href="vendor/bulma.min.css">
+  <link rel="stylesheet" href="style/global.css">
+  <link rel="stylesheet" href="style/signon.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  <script defer src="js/report.js"></script>
 </head>
-<body>
-  <h1>Report</h1>
+<body class="dark-bg">
+  <section class="hero is-fullheight">
+    <div class="hero-body">
+      <form class="signon" id="signon-report">
+        <div class="signon-bar">
+          <span class="signon-bar-phone"></span>
+        </div>
+        <div class="signon-content">
+          <header class="signon-header">
+            <h1>Report A Spam Number</h1>
+          </header>
+          <div class="signon-inputs">
+            <input class="report-input" type="text" name="spamnumber" id="spamnumber" placeholder="spamnumber">
+            <input class="report-input" type="text" name="cityname" id="cityname" placeholder="cityname">
+            <!-- <input class="signon-input" type="password" name="password" id="password" placeholder="Password">
+            <input class="signon-input" type="password" name="password-confirm" id="password-confirm" placeholder="Confirm Password"> -->
+          </div>
+          <button class="button">Submit</button><br>
+            <button class="button">View All Spam Numbers</button>
+          <br>
+            <button class="button">View Spam Numbers Reported by you</button>
+            <!-- <a href="">Logout</a> -->
+            <a class="navbar-item" href="/">
+              logout
+            </a>
+        </div>
+      </form>
+    </div>
+  </section>
 </body>
 </html>

@@ -29,8 +29,11 @@ function login () {
     }
 
     fetch('/api/login', requestOptions)
-      .then(response => response.text())
-      .then(result => console.log(result))
+      .then(function (response) {
+        window.location.replace('/report')
+      })
+      // .then(response => response.text())
+      // .then(result => console.log(result))
       .catch(error => console.log('error', error))
   })
 }
