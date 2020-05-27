@@ -43,3 +43,21 @@
   height: 43px;
   margin-bottom: 25px;
 }
+
+.report-card {
+  background: #FFF;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  padding: 0;
+}
+
+.report-card-content {
+  padding: 10px;
+}
+
+.report-text {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  color: #5C718A;
+}
