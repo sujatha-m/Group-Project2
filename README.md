@@ -12,7 +12,7 @@ https://github.com/sujatha-m/Group-Project2
 
 ### Project Presentation Slides URL:
 
-https://docs.google.com/presentation/d/1OnWRDeEeE8K4jemnzZ9s_pFp4DiJ7ZoMWG0iySpO0RE/edit?usp=sharing
+https://drive.google.com/open?id=1OnWRDeEeE8K4jemnzZ9s_pFp4DiJ7ZoMWG0iySpO0RE
 
 
 ## Badges
@@ -61,6 +61,12 @@ The database would serve as a central repository to hold list of spam numbers re
 Users in turn can subscribe (if interested) for getting  updated numbers from the database (so that they could add filters in their phones to block calls if received in the future).
 
 The numbers held in the database would serve as inputs to cyber or security departments for analysis.
+
+## Instructions
+* User can Sign up or Login to the App
+* User can report the spam Number with message
+* User can view all spam number stored in the database
+* Delete number reported by a user (from his login)
 
 ## Wire Frame
 ![](Demo/wireFrame.png)
