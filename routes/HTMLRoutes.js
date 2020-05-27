@@ -68,7 +68,19 @@ router.get('/register', (req, res) => {
 })
 
 router.get('/report', isAuthenticated, (req, res) => {
-  res.sendFile(path.join(PUBLIC_FOLDER_PATH, 'report.html'))
+  res.render('report', {
+    title: 'Spam Numbers Tracker | Login',
+    css: [
+      lib.bulma,
+      lib.global,
+      lib.fonts,
+      'style/report.css'
+    ],
+    script: [
+      lib.fontawesome,
+      'js/report.js'
+    ]
+  })
 })
 router.get('/view', (req, res) => {
   res.sendFile(path.join(PUBLIC_FOLDER_PATH, 'view.html'))
