@@ -1,9 +1,14 @@
 const form = document.querySelector('#report-form')
 
+// Form
 const phoneNumber = document.querySelector('#spamnumber')
 const cityName = document.querySelector('#cityname')
 const message = document.querySelector('#message')
-// const button = document.querySelector('.button')
+
+// Header
+const headerPhone = document.querySelector('#phoneNumber')
+const headerCity = document.querySelector('#city')
+// const headerUser = document.querySelector('#user')
 
 form.addEventListener('submit', function (event) {
   event.preventDefault()
@@ -28,4 +33,27 @@ form.addEventListener('submit', function (event) {
     // .then(response => response.text())
     // .then(result => console.log(result))
     .catch(error => console.log('error', error))
+})
+
+function updateHeader (el, text, defaultText) {
+  if (text) {
+    el.textContent = text
+  } else {
+    el.textContent = defaultText
+  }
+}
+
+phoneNumber.addEventListener('input', (event) => {
+  updateHeader(headerPhone, phoneNumber.value, 'No Phone Number')
+})
+phoneNumber.addEventListener('propertychange', (event) => {
+  updateHeader(headerPhone, phoneNumber.value, 'No Phone Number')
+})
+
+cityName.addEventListener('input', (event) => {
+  updateHeader(headerCity, cityName.value, 'No City')
+})
+
+cityName.addEventListener('propertychange', (event) => {
+  updateHeader(headerCity, cityName.value, 'No City')
 })
