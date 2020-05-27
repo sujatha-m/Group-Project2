@@ -51,7 +51,7 @@ router.get('/login', (req, res) => {
 
 router.get('/register', (req, res) => {
   res.render('register', {
-    title: 'Spam Numbers Tracker | Login',
+    title: 'Spam Numbers Tracker | Register',
     css: [
       lib.bulma,
       lib.global,
@@ -67,7 +67,7 @@ router.get('/register', (req, res) => {
 
 router.get('/report', isAuthenticated, (req, res) => {
   res.render('report', {
-    title: 'Spam Numbers Tracker | Login',
+    title: 'Spam Numbers Tracker | Report',
     css: [
       lib.bulma,
       lib.global,
