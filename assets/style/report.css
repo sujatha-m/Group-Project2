@@ -1,80 +1,45 @@
-.report {
-    margin: 0 auto;
-    width: 675px;
-    min-height: 400px;
-    border-radius: 10px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: row;
-  }
-  
-  .report input {
-    display: block;
-    margin: 15px 0;
-    width: 100%;
-  }
-  
-  .report-bar {
-    background: linear-gradient(270deg, rgba(27, 37, 34, 0.45) 0%, rgba(0, 0, 0, 0) 100%), rgba(187, 17, 119, 0.9);
-    width: 200px;
-    height: auto;
-  }
-  
-  .report-bar-phone {
-    background: url('../images/phone.png');
-    background-size: 300px;
-    background-repeat: no-repeat;
-    background-position-x: -35px;
-    width: 100%;
-    height: 100%;
-    display: block;
-  }
-  
-  .report-content {
-    background: #fff;
-    flex-grow: 1;
-    padding: 30px 20px;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .report-inputs {
-    flex-grow: 1;
-    color: #5C718A;
-  }
-  
-  .report-input {
-    background: rgba(229, 229, 229, 0.9);
-    border-radius: 10px;
-    color: #5C718A;
-    font-size: 17px;
-    border: none;
-    padding: 10px 19px;
-  }
-  
-  .report-input::placeholder {
-    color: #5C718A;
-    font-size: 17px;
-  }
-  
-  .report-header {
-    font-size: 21px;
-    color: #5C718A;
-    margin-bottom: 46px;
-  }
-  
-  .report-footer {
-    justify-content: space-between;
-    display: flex;
-    align-items: center;
-  }
-  
-  @media screen and (max-width: 768px) {
-    .report {
-      flex-direction: column;
-    }
-    .report-bar {
-      width: 100%;
-    }
-    .report-bar-phone {background-position-x: 90%;background-position-y: -15px;background-size: 200px;}
-  }
+.report-bar {
+  height: 200px;
+  background: linear-gradient(0deg, rgba(27, 37, 34, 0.45) 0%, rgba(0, 0, 0, 0) 100%), rgba(187, 17, 119, 0.9);
+  color: #fff;
+}
+
+.report-bar-phone {
+  background-image: url(../images/phone.png);
+  background-repeat: no-repeat;
+  background-position: center 9%;
+  width: 100%;
+}
+
+.report-card {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.report-header {
+  position: absolute;
+  padding: 20px;
+  width: 100%;
+  height: inherit;
+  font-size: 21px;
+  font-weight: 300;
+}
+
+.report-header li {
+  margin-bottom: 10px;
+}
+
+.report-create {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.report-title {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  color: #FDE8F4;
+  height: 43px;
+  margin-bottom: 25px;
+}

@@ -1,29 +1,82 @@
 <body class="dark-bg">
   <section class="hero is-fullheight">
-    <div class="hero-body">
-      <form class="report" id="report-report">
-        <div class="report-bar">
-          <span class="report-bar-phone"></span>
-        </div>
-        <div class="report-content">
-          <header class="report-header">
-            <h1>Report A Spam Number</h1>
-          </header>
-          <div class="report-inputs">
-            <input class="report-input" type="text" name="spamnumber" id="spamnumber" placeholder="spamnumber">
-            <input class="report-input" type="text" name="cityname" id="cityname" placeholder="cityname">
-            <input class="report-input" type="text" name="message" id="message" placeholder="message">
+    <div class="hero-head">
+      <nav class="navbar is-transparent">
+        <div class="navbar-brand">
+          <a class="navbar-item branding" href="/">
+            Spam Numbers Tracker
+          </a>
+          <div role="button" class="navbar-burger burger" data-target="navbar-menu">
+            <span></span>
+            <span></span>
+            <span></span>
           </div>
-          <button class="button">Submit</button><br>
-          <button class="viewAllNum"><a class="navbar-item" href="/view"> View All Spam Numbers</a></button>
-          <br>
-            <button class="button">View Spam Numbers Reported by you</button>
-            <!-- <a href="">Logout</a> -->
-            <a class="navbar-item" href="/">
-              logout
-            </a>
         </div>
-      </form>
+
+        <div class="navbar-menu" id="navbar-menu">
+          <div class="navbar-end">
+            <a class="navbar-item" href="/">
+              Home
+            </a>
+            <a class="navbar-item" href="/report">
+              Report Page
+            </a>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div class="hero-body">
+      <div class="container">
+        <div class="columns">
+          <div class="column">
+            <h2 class="report-title">Activity</h2>
+            <span class="placeholder"></span>
+          </div>
+          <div class="column">
+            <div class="report-create">
+              <a class="button" href="/view">View All Spam Numbers</a>
+              <button class="button">Create</button>
+            </div>
+            <div class="card report-card">
+              <header class="card-header report-bar">
+                <span class="report-bar-phone"></span>
+                <ul class="menu-list report-header">
+                  <li><span id="phoneNumber">No Phone Number</span></li>
+                  <li><span id="city">No City</span></li>
+                  <li><span id="user">No User</span></li>
+                </ul>
+              </header>
+              <div class="card-content is-clearfix">
+                <form id="report-form">
+                  <div class="field">
+                    <label class="label">Telephone Number</label>
+                    <div class="control">
+                      <input class="input" type="tel" id="spamnumber" placeholder="Ex. (000)-000-0000">
+                    </div>
+                  </div>
+                  <div class="field">
+                    <label class="label">City</label>
+                    <div class="control">
+                      <input class="input" type="tel" id="cityname" placeholder="Ex. Ottawa">
+                    </div>
+                  </div>
+                  <div class="field">
+                    <label class="label">Message</label>
+                    <div class="control">
+                      <textarea class="textarea has-fixed-size" placeholder="Comment Here..." id="message"></textarea>
+                    </div>
+                  </div>
+                  <div class="field is-pulled-right">
+                    <div class="control">
+                      <button class="button">Submit</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 </body>
