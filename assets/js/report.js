@@ -8,7 +8,7 @@ const message = document.querySelector('#message')
 // Header
 const headerPhone = document.querySelector('#phoneNumber')
 const headerCity = document.querySelector('#city')
-const headerUser = document.querySelector('#user')
+// const headerUser = document.querySelector('#user')
 
 form.addEventListener('submit', function (event) {
   event.preventDefault()
