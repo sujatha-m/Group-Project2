@@ -52,7 +52,7 @@ SO THAT I can report the spam number which i received, and view all spam numbers
    * [Visuals](#visuals)
 
 ## Description
-**S**pam-**N**um-**T**racker! 
+**S**pam-**N**um-**T**racker!
 
 Spam Numbers Tracker and Renderer for Analysis
 
@@ -85,10 +85,9 @@ The numbers held in the database would serve as inputs to cyber or security depa
 Bulma: https://bulma.io/
 
 ## Visuals
-
 ![](Demo/.gif)
 
-## Installation 
+## Installation
 Run npm install to install all dependencies. To use the application locally run server.js
 
 ## Usage
@@ -101,12 +100,12 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 Please make sure to update tests as appropriate.
 
 
-## License 
+## License
 [![MIT](https://img.shields.io/npm/l/isc?color=Blue&style=plastic)](https://img.shields.io/npm/l/isc?color=Blue&style=plastic)
 
 ### Directions for Future Development
 * Add capability to search internally for existence of reported number in the database and do not add if the number       already exists in the database
 * Delete number reported by a user (from his login)
 * View reported numbers by city
-* Add support for the application to integrate with a phone’s contact application to update and filter/block spam call numbers (received from the database)  
+* Add support for the application to integrate with a phone’s contact application to update and filter/block spam call numbers (received from the database)
 
