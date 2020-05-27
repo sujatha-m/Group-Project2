@@ -68,7 +68,11 @@ router.get('/register', (req, res) => {
 
 router.get('/report', isAuthenticated, async (req, res) => {
   try {
-    const reports = await db.Report.findAll()
+    const reports = await db.Report.findAll({
+      where: {
+        UserId: req.user.id
+      }
+    })
 
     res.render('report', {
       reports,
@@ -89,21 +93,28 @@ router.get('/report', isAuthenticated, async (req, res) => {
   }
 })
 
-router.get('/view', (req, res) => {
-  res.render('view', {
-    title: 'Spam Numbers Tracker | All Spam Number',
-    css: [
-      lib.bulma,
-      lib.global,
-      lib.fonts,
-      'style/report.css'
-    ],
-    script: [
-      lib.fontawesome,
-      lib.jquery,
-      'js/view.js'
-    ]
-  })
+router.get('/view', async (req, res) => {
+  try {
+    const reports = await db.Report.findAll()
+
+    res.render('view', {
+      reports,
+      title: 'Spam Numbers Tracker | All Spam Number',
+      css: [
+        lib.bulma,
+        lib.global,
+        lib.fonts,
+        'style/report.css'
+      ],
+      script: [
+        lib.fontawesome,
+        lib.jquery,
+        'js/view.js'
+      ]
+    })
+  } catch (error) {
+    console.error(error)
+  }
 })
 
 module.exports = router
