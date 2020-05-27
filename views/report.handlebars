@@ -1,41 +1,19 @@
 <body class="dark-bg">
   <section class="hero is-fullheight">
     <div class="hero-head">
-      <nav class="navbar is-transparent">
-        <div class="navbar-brand">
-          <a class="navbar-item branding" href="/">
-            Spam Numbers Tracker
-          </a>
-          <div role="button" class="navbar-burger burger" data-target="navbar-menu">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-        </div>
-
-        <div class="navbar-menu" id="navbar-menu">
-          <div class="navbar-end">
-            <a class="navbar-item" href="/">
-              Home
-            </a>
-            <a class="navbar-item" href="/report">
-              Report Page
-            </a>
-          </div>
-        </div>
-      </nav>
+      {{> navbar}}
     </div>
     <div class="hero-body">
       <div class="container">
         <div class="columns">
           <div class="column">
             <h2 class="report-title">Activity</h2>
-            <span class="placeholder"></span>
+            {{> report-row}}
           </div>
           <div class="column">
             <div class="report-create">
               <a class="button" href="/view">View All Spam Numbers</a>
-              <button class="button">Create</button>
+              <button class="button" id="report-clear">Create New Post</button>
             </div>
             <div class="card report-card">
               <header class="card-header report-bar">

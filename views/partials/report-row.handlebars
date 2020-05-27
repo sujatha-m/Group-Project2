@@ -1,0 +1,16 @@
+<ul>
+  {{#each reports}}
+    <li>
+      <div class="card report-card" data-id="{{dataValues.id}}">
+        <div class="card-content report-card-content">
+          <div class="media">
+            <div class="media-left">
+              <p class="report-text is-4">Blocked: {{dataValues.phoneNumber}}</p>
+              <p class="report-text is-6">City: {{dataValues.cityName}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+  {{/each}}
+</ul>
