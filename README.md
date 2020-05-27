@@ -92,7 +92,7 @@ Run npm install to install all dependencies. To use the application locally run 
 
 ## Usage
 ```sh
-      node server.js  
+node server.js
 ```
 
 ## Contributing
