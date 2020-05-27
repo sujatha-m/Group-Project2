@@ -1,4 +1,5 @@
 const express = require('express')
+const db = require('../models')
 
 // Requiring our custom middleware for checking if a user is logged in
 const isAuthenticated = require('../config/middleware/isAuthenticated')
@@ -65,21 +66,29 @@ router.get('/register', (req, res) => {
   })
 })
 
-router.get('/report', isAuthenticated, (req, res) => {
-  res.render('report', {
-    title: 'Spam Numbers Tracker | Report',
-    css: [
-      lib.bulma,
-      lib.global,
-      lib.fonts,
-      'style/report.css'
-    ],
-    script: [
-      lib.fontawesome,
-      'js/report.js'
-    ]
-  })
+router.get('/report', isAuthenticated, async (req, res) => {
+  try {
+    const reports = await db.Report.findAll()
+
+    res.render('report', {
+      reports,
+      title: 'Spam Numbers Tracker | Report',
+      css: [
+        lib.bulma,
+        lib.global,
+        lib.fonts,
+        'style/report.css'
+      ],
+      script: [
+        lib.fontawesome,
+        'js/report.js'
+      ]
+    })
+  } catch (error) {
+    console.error(error)
+  }
 })
+
 router.get('/view', (req, res) => {
   res.render('view', {
     title: 'Spam Numbers Tracker | All Spam Number',
