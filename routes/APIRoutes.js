@@ -4,6 +4,8 @@ const passport = require('../config/passport')
 
 const router = express.Router()
 
+var currentUserId
+
 // Sign-on Routes
 // Login
 router.post('/api/login', passport.authenticate('local'), (req, res) => {
@@ -69,4 +71,37 @@ router.get('/api/view', function (req, res) {
     .then(rows => res.status(200).json({ data: rows }))
     .catch(err => res.status(500).json({ errors: [err] }))
 })
+
+router.get('/api/viewmine', function (req, res) {
+  // The `.findAll()` method is inherited from the Sequelize.Model class
+  // and returns the results of a "SELECT * FROM Todos" command.
+  // findAllRows()
+  db.Report.findAll({
+    where: {
+      UserId: currentUserId
+    }
+  })
+    .then(rows => res.status(200).json({ data: rows }))
+    .catch(err => res.status(500).json({ errors: [err] }))
+})
+
+// DELETE route for deleting reports.
+// We can access the primary key for the Report to be deleted at `req.params.id`
+// router.delete('/:id', async function (req, res) {
+router.delete('/api/viewmine/:id', async function (req, res) {
+  try {
+    // const recordCount = await Todo.destroy({where: {id: req.params.id}})
+    // Retrieve the row to be deleted so that we can return it to the client
+    let targetReport = await db.Report.findByPk(req.params.id)
+    // Use the `.destroy()` method inherited from the Sequelize.Model class
+    // @see https://sequelize.org/v5/class/lib/model.js~Model.html#static-method-destroy
+    targetReport = await targetReport.destroy()
+    // return the successfully removed report to the client
+    res.status(200).json({ data: targetReport })
+  } catch (err) {
+    console.log(err)
+    res.status(500).json({ errors: [err] })
+  }
+})
+
 module.exports = router

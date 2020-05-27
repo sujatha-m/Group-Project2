@@ -1,5 +1,6 @@
 const express = require('express')
 const db = require('../models')
+const path = require('path')
 
 // Requiring our custom middleware for checking if a user is logged in
 const isAuthenticated = require('../config/middleware/isAuthenticated')
@@ -104,6 +105,11 @@ router.get('/view', (req, res) => {
       'js/view.js'
     ]
   })
+})
+
+router.get('/viewmine', (req, res) => {
+  // eslint-disable-next-line no-undef
+  res.sendFile(path.join(PUBLIC_FOLDER_PATH, 'viewmine.html'))
 })
 
 module.exports = router
