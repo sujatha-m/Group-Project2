@@ -4,6 +4,7 @@ const form = document.querySelector('#report-form')
 const phoneNumber = document.querySelector('#spamnumber')
 const cityName = document.querySelector('#cityname')
 const message = document.querySelector('#message')
+const clearBtn = document.querySelector('#report-clear')
 
 // Header
 const headerPhone = document.querySelector('#phoneNumber')
@@ -33,6 +34,14 @@ form.addEventListener('submit', function (event) {
     // .then(response => response.text())
     // .then(result => console.log(result))
     .catch(error => console.log('error', error))
+})
+
+clearBtn.addEventListener('click', () => {
+  phoneNumber.value = ''
+  cityName.value = ''
+  message.value = ''
+  headerPhone.textContent = 'No Phone Number'
+  headerCity.textContent = 'No City'
 })
 
 function updateHeader (el, text, defaultText) {
