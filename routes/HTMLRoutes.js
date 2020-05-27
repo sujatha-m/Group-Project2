@@ -68,7 +68,11 @@ router.get('/register', (req, res) => {
 
 router.get('/report', isAuthenticated, async (req, res) => {
   try {
-    const reports = await db.Report.findAll()
+    const reports = await db.Report.findAll({
+      where: {
+        UserId: req.user.id
+      }
+    })
 
     res.render('report', {
       reports,
