@@ -36,7 +36,19 @@ router.get('/', (req, res) => {
 })
 
 router.get('/login', (req, res) => {
-  res.sendFile(path.join(PUBLIC_FOLDER_PATH, 'login.html'))
+  res.render('login', {
+    title: 'Spam Numbers Tracker | Login',
+    css: [
+      lib.bulma,
+      lib.global,
+      lib.fonts,
+      'style/signon.css'
+    ],
+    script: [
+      lib.fontawesome,
+      'js/signon.js'
+    ]
+  })
 })
 
 router.get('/register', (req, res) => {
