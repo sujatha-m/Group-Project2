@@ -1,4 +1,4 @@
-const form = document.querySelector('.report')
+const form = document.querySelector('#report-form')
 
 const phoneNumber = document.querySelector('#spamnumber')
 const cityName = document.querySelector('#cityname')
