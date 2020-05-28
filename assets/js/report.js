@@ -66,3 +66,20 @@ cityName.addEventListener('input', (event) => {
 cityName.addEventListener('propertychange', (event) => {
   updateHeader(headerCity, cityName.value, 'No City')
 })
+
+// Activity List
+// Delete
+document.querySelectorAll('.report-row').forEach((el) => {
+  el.querySelector('.report-delete').addEventListener('click', () => {
+    const dataID = el.getAttribute('data-id')
+    const requestOptions = {
+      method: 'DELETE',
+      redirect: 'follow'
+    }
+
+    fetch(`/api/report/${dataID}`, requestOptions)
+      .then(response => location.reload())
+      .then(result => console.log(result))
+      .catch(error => console.log('error', error))
+  })
+})
