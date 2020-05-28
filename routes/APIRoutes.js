@@ -1,15 +1,20 @@
+// Dependencies
 const express = require('express')
+const router = express.Router()
+
+// Requiring our models and passport as we've configured it
 const db = require('../models')
 const passport = require('../config/passport')
 
-const router = express.Router()
-
-// Sign-on Routes
-// Login
+// Using the passport.authenticate middleware with our local strategy.
+// If the user has valid login credentials, send them to the report page.
+// Otherwise the user will be sent an error
 router.post('/api/login', passport.authenticate('local'), (req, res) => {
   res.json(req.user)
 })
-
+// Route for signing up a user. The user's password is automatically hashed and stored
+// If the user is created successfully, proceed to log the user in,
+// otherwise send back an error
 router.post('/api/register', async (req, res) => {
   try {
     db.User.create({
@@ -25,7 +30,7 @@ router.post('/api/register', async (req, res) => {
   }
 })
 
-// Report Routes
+// POST route for creating a new report
 router.post('/api/report', async (req, res) => {
   req.body.UserId = req.user.id
   const data = {
@@ -41,7 +46,7 @@ router.post('/api/report', async (req, res) => {
     res.status(404).json(error)
   }
 })
-
+// DELETE route for deleting reorts
 router.delete('/api/report/:id', async (req, res) => {
   try {
     let report = await db.Report.findByPk(req.params.id)

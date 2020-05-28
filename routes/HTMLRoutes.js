@@ -1,3 +1,4 @@
+// Dependencies
 const express = require('express')
 const db = require('../models')
 
@@ -20,6 +21,7 @@ const lib = {
 
 const router = express.Router()
 
+// The index route redirects to index page
 router.get('/', (req, res) => {
   res.render('index', {
     title: 'Spam Numbers Tracker',
@@ -37,6 +39,7 @@ router.get('/', (req, res) => {
   })
 })
 
+// The route for creating login
 router.get('/login', (req, res) => {
   res.render('login', {
     title: 'Spam Numbers Tracker | Login',
@@ -52,12 +55,12 @@ router.get('/login', (req, res) => {
     ]
   })
 })
-
+// Route for logging user out
 router.get('/logout', function (req, res) {
   req.logout()
   res.redirect('/')
 })
-
+// The route for registering user
 router.get('/register', (req, res) => {
   res.render('register', {
     title: 'Spam Numbers Tracker | Register',
@@ -73,7 +76,7 @@ router.get('/register', (req, res) => {
     ]
   })
 })
-
+// The route for creating report
 router.get('/report', isAuthenticated, async (req, res) => {
   try {
     const reports = await db.Report.findAll({
@@ -102,7 +105,7 @@ router.get('/report', isAuthenticated, async (req, res) => {
     console.error(error)
   }
 })
-
+// The route for viewing report spam numbers
 router.get('/view', async (req, res) => {
   try {
     const reports = await db.Report.findAll()

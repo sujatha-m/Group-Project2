@@ -10,6 +10,7 @@ const clearBtn = document.querySelector('#report-clear')
 const headerPhone = document.querySelector('#phoneNumber')
 const headerCity = document.querySelector('#city')
 
+// Adding event listeners for creating report
 form.addEventListener('submit', function (event) {
   event.preventDefault()
 
@@ -30,8 +31,6 @@ form.addEventListener('submit', function (event) {
     .then(function (response) {
       window.location.reload('/report')
     })
-    // .then(response => response.text())
-    // .then(result => console.log(result))
     .catch(error => console.log('error', error))
 })
 

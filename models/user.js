@@ -1,8 +1,10 @@
+// Requiring bcrypt for password hashing
 const bcrypt = require('bcryptjs')
 
 module.exports = function (sequelize, DataTypes) {
+  // Creating our User model
   const User = sequelize.define('User', {
-
+    // The username cannot be null
     username: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -24,6 +26,7 @@ module.exports = function (sequelize, DataTypes) {
       allowNull: false
     }
   })
+  // if an unhashed password entered by the user can be compared to the hashed password stored in our database
   User.prototype.validPassword = function (password) {
     return bcrypt.compareSync(password, this.password)
   }
@@ -32,6 +35,8 @@ module.exports = function (sequelize, DataTypes) {
   User.addHook('beforeCreate', function (user) {
     user.password = bcrypt.hashSync(user.password, bcrypt.genSaltSync(10), null)
   })
+  // Associate the User model to the report model in a `hasMany` relationship
+  // When an User is deleted, also delete any associated Report
   User.associate = function (models) {
     User.hasMany(models.Report, { onDelete: 'cascade' })
   }
