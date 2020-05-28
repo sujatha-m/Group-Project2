@@ -18,6 +18,13 @@
       <a class="navbar-item" href="/report">
         Report Page
       </a>
+      {{#if login}}
+      <div class="navbar-item">
+        <div class="buttons">
+          <a href="/logout" class="button is-primary">Logout</a>
+        </div>
+      </div>
+      {{else}}
       <a class="navbar-item" href="/login">
         Login
       </a>
@@ -26,6 +33,7 @@
           <a href="/register" class="button is-primary">Sign up</a>
         </div>
       </div>
+      {{/if}}
     </div>
   </div>
 </nav>

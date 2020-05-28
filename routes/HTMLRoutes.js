@@ -21,6 +21,7 @@ const router = express.Router()
 router.get('/', (req, res) => {
   res.render('index', {
     title: 'Spam Numbers Tracker',
+    login: req.user,
     css: [
       lib.bulma,
       lib.global,
@@ -50,6 +51,11 @@ router.get('/login', (req, res) => {
   })
 })
 
+router.get('/logout', function (req, res) {
+  req.logout()
+  res.redirect('/')
+})
+
 router.get('/register', (req, res) => {
   res.render('register', {
     title: 'Spam Numbers Tracker | Register',
@@ -77,6 +83,7 @@ router.get('/report', isAuthenticated, async (req, res) => {
     res.render('report', {
       reports,
       showDeleteBtn: true,
+      login: req.user,
       title: 'Spam Numbers Tracker | Report',
       css: [
         lib.bulma,
