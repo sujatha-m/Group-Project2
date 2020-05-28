@@ -75,6 +75,11 @@
   }
   .signon-bar {
     width: 100%;
+    height: 130px;
   }
-  .signon-bar-phone {background-position-x: 90%;background-position-y: -15px;background-size: 200px;}
+  .signon-bar-phone {
+    background-position-x: 90%;
+    background-position-y: -15px;
+    background-size: 300px;
+  }
 }
