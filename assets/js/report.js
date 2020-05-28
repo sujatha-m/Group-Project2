@@ -1,15 +1,14 @@
 const form = document.querySelector('#report-form')
 
-// Form
+// Report Card Form element
 const phoneNumber = document.querySelector('#spamnumber')
 const cityName = document.querySelector('#cityname')
 const message = document.querySelector('#message')
 const clearBtn = document.querySelector('#report-clear')
 
-// Header
+// Report Card Header Element
 const headerPhone = document.querySelector('#phoneNumber')
 const headerCity = document.querySelector('#city')
-// const headerUser = document.querySelector('#user')
 
 form.addEventListener('submit', function (event) {
   event.preventDefault()
@@ -36,6 +35,7 @@ form.addEventListener('submit', function (event) {
     .catch(error => console.log('error', error))
 })
 
+// Create New Post
 clearBtn.addEventListener('click', () => {
   phoneNumber.value = ''
   cityName.value = ''
@@ -44,6 +44,7 @@ clearBtn.addEventListener('click', () => {
   headerCity.textContent = 'No City'
 })
 
+// This is use to update the header when the user is typing in the form
 function updateHeader (el, text, defaultText) {
   if (text) {
     el.textContent = text
@@ -68,7 +69,7 @@ cityName.addEventListener('propertychange', (event) => {
 })
 
 // Activity List
-// Delete
+// Delete Button on the report row
 document.querySelectorAll('.report-row').forEach((el) => {
   el.querySelector('.report-delete').addEventListener('click', () => {
     const dataID = el.getAttribute('data-id')

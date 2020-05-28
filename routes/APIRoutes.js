@@ -10,23 +10,6 @@ router.post('/api/login', passport.authenticate('local'), (req, res) => {
   res.json(req.user)
 })
 
-// // Register
-// router.post('/api/register', async (req, res) => {
-//   const { username, email, password } = req.body
-
-//   try {
-//     const user = await db.User.create({
-//       username,
-//       email,
-//       password
-//     })
-
-//     res.status(200).json(user)
-//   } catch (error) {
-//     res.status(404).json(error)
-//   }
-// })
-
 router.post('/api/register', async (req, res) => {
   try {
     db.User.create({
@@ -42,8 +25,8 @@ router.post('/api/register', async (req, res) => {
   }
 })
 
+// Report Routes
 router.post('/api/report', async (req, res) => {
-  console.log(req.body)
   req.body.UserId = req.user.id
   const data = {
     phoneNumber: req.body.phoneNumber,

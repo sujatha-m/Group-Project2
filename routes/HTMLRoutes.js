@@ -5,9 +5,11 @@ const db = require('../models')
 const isAuthenticated = require('../config/middleware/isAuthenticated')
 
 // This is use to inject library into the HTML document head.
-// I couldn't find a better way of doing this as Express render method doesn't make it easy to do.
+// I couldn't find a better way of doing this as
+// Express render method doesn't make it easy to do.
 //
-// To inject library into a page, pass a object with the title, css array, and script array into Express render method option.
+// To inject library into a page, pass a object with the
+// title, css array, and script array into Express render method option.
 const lib = {
   global: 'style/global.css',
   bulma: 'vendor/bulma.min.css',
