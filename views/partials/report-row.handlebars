@@ -1,3 +1,4 @@
+{{!-- getting all the reports  report by the user --}}
 <ul>
   {{#each reports}}
     <li>
@@ -10,6 +11,7 @@
                 <p class="report-text is-6">City: {{dataValues.cityName}}</p>
               </div>
             </div>
+            {{!-- delete  the reports  report by the user --}}
             {{#if ../showDeleteBtn}}
             <div class="level-right">
               <button class="button is-danger report-delete">Delete</button>

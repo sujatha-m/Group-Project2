@@ -1,4 +1,4 @@
--- Drops the todolist if it exists currently --
+-- Drops the spamtracker_db if it exists currently --
 DROP DATABASE IF EXISTS `spamtracker_db`;
--- Creates the "todolist" database --
+-- Creates the "spamtracker" database --
 CREATE DATABASE `spamtracker_db`;
