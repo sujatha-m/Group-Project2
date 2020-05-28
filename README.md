@@ -14,6 +14,8 @@ https://github.com/sujatha-m/Group-Project2
 
 https://drive.google.com/open?id=1OnWRDeEeE8K4jemnzZ9s_pFp4DiJ7ZoMWG0iySpO0RE
 
+## Google Video
+https://drive.google.com/open?id=1TOf2SkGxJaB_taPqpmq_bYGw8pKoJVBv
 
 ## Badges
 [![gf](https://img.shields.io/github/followers/sujatha-m?style=social)](https://img.shields.io/github/followers/sujatha-m?style=social)
@@ -93,7 +95,7 @@ The numbers held in the database would serve as inputs to cyber or security depa
 Bulma: https://bulma.io/
 
 ## Visuals
-![](Demo/.gif)
+![](Demo/SpamnumTracker.gif)
 
 ## Installation
 Run npm install to install all dependencies. To use the application locally run server.js
