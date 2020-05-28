@@ -1,7 +1,7 @@
 {
   "name": "group-project2",
   "version": "0.0.1",
-  "description": "Instructor demo for Project 2 of the Carleton University Coding Bootcamp",
+  "description": "Spam Numbers Tracker and Renderer for Analysis",
   "main": "server.js",
   "scripts": {
     "test": "npm run lint",
@@ -18,7 +18,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rlmckenney/FSF-CU-Project2.git"
+    "url": "https://github.com/sujatha-m/Group-Project2"
   },
   "keywords": [
     "node",
@@ -26,12 +26,12 @@
     "mysql",
     "heroku"
   ],
-  "author": "",
+  "author": "Sujatha Mallela, Gayathiri Ramamoorthy, Brian Dinh",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/rlmckenney/FSF-CU-Project2/issues"
+    "url": "https://github.com/sujatha-m/Group-Project2/issues"
   },
-  "homepage": "https://github.com/rlmckenney/FSF-CU-Project2#readme",
+  "homepage": "https://github.com/sujatha-m/Group-Project2#readme",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "express": "^4.17.1",
