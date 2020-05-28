@@ -12,7 +12,7 @@ https://github.com/sujatha-m/Group-Project2
 
 ### Project Presentation Slides URL:
 
-https://docs.google.com/presentation/d/1OnWRDeEeE8K4jemnzZ9s_pFp4DiJ7ZoMWG0iySpO0RE/edit?usp=sharing
+https://drive.google.com/open?id=1OnWRDeEeE8K4jemnzZ9s_pFp4DiJ7ZoMWG0iySpO0RE
 
 
 ## Badges
@@ -62,6 +62,13 @@ Users in turn can subscribe (if interested) for getting  updated numbers from th
 
 The numbers held in the database would serve as inputs to cyber or security departments for analysis.
 
+## Instructions
+* User can Sign up or Login to the Spam Number Tracker App
+* User can report the spam Number and cityname with message
+* User can view all spam number stored in the database
+* User can view his own reported numbers from database
+* Delete spam numbers reported by a user (from his login)
+
 ## Wire Frame
 ![](Demo/wireFrame.png)
 
@@ -75,6 +82,7 @@ The numbers held in the database would serve as inputs to cyber or security depa
 * MYSQL2
 * sequelize
 * Express
+* Express-sessions
 * Express-handlebars
 * Passport
 * passport-local
