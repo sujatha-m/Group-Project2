@@ -59,14 +59,16 @@ router.post('/api/report', async (req, res) => {
   }
 })
 
-// GET route for getting all of the reorts
-router.get('/api/view', function (req, res) {
-  // The `.findAll()` method is inherited from the Sequelize.Model class
-  // and returns the results of a "SELECT * FROM Reports" command.
-  // findAllRows()
-  console.log(req.user)
-  db.Report.findAll()
-    .then(rows => res.status(200).json({ data: rows }))
-    .catch(err => res.status(500).json({ errors: [err] }))
+router.delete('/api/report/:id', async (req, res) => {
+  try {
+    let report = await db.Report.findByPk(req.params.id)
+
+    report = await report.destroy()
+
+    res.status(200).json({ data: report })
+  } catch (error) {
+    res.status(500).json({ error: [error] })
+  }
 })
+
 module.exports = router
