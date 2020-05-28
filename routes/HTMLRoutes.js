@@ -50,6 +50,11 @@ router.get('/login', (req, res) => {
   })
 })
 
+router.get('/logout', function (req, res) {
+  req.logout()
+  res.redirect('/')
+})
+
 router.get('/register', (req, res) => {
   res.render('register', {
     title: 'Spam Numbers Tracker | Register',
