@@ -1,13 +1,20 @@
 <ul>
   {{#each reports}}
     <li>
-      <div class="card report-card" data-id="{{dataValues.id}}">
+      <div class="card report-card report-row" data-id="{{dataValues.id}}">
         <div class="card-content report-card-content">
-          <div class="media">
-            <div class="media-left">
-              <p class="report-text is-4">Blocked: {{dataValues.phoneNumber}}</p>
-              <p class="report-text is-6">City: {{dataValues.cityName}}</p>
+          <div class="level">
+            <div class="level-left">
+              <div>
+                <p class="report-text is-4">Blocked: {{dataValues.phoneNumber}}</p>
+                <p class="report-text is-6">City: {{dataValues.cityName}}</p>
+              </div>
             </div>
+            {{#if ../showDeleteBtn}}
+            <div class="level-right">
+              <button class="button is-danger report-delete">Delete</button>
+            </div>
+            {{/if}}
           </div>
         </div>
       </div>

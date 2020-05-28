@@ -76,6 +76,7 @@ router.get('/report', isAuthenticated, async (req, res) => {
 
     res.render('report', {
       reports,
+      showDeleteBtn: true,
       title: 'Spam Numbers Tracker | Report',
       css: [
         lib.bulma,
@@ -99,6 +100,7 @@ router.get('/view', async (req, res) => {
 
     res.render('view', {
       reports,
+      showDeleteBtn: false,
       title: 'Spam Numbers Tracker | All Spam Number',
       css: [
         lib.bulma,
