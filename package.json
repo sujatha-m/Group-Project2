@@ -34,7 +34,7 @@
   "homepage": "https://github.com/sujatha-m/Group-Project2#readme",
   "dependencies": {
     "bcryptjs": "^2.4.3",
-    "express": "^4.17.1",
+    "express": "^4.18.2",
     "express-handlebars": "^4.0.4",
     "express-session": "^1.17.1",
     "morgan": "^1.10.0",
